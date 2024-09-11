@@ -1,0 +1,42 @@
+.btns-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#sidebar .btns-down button {
+  width: 33.33%;
+  border-radius: 0;
+  border: 0;
+  height: 100%;
+  padding: 12px 8px;
+  cursor: pointer;
+}
+
+#sidebar .btns-down button.active {
+  background-color: #5c5c5c;
+}
+
+#sidebar .btns-down button:not(:last-child) {
+  border-right: 1px solid #838383;
+}
+
+#sidebar .btns-down.closed {
+  display: none;
+}
+
+.submitted-list-flex svg {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+@media (max-width: 960px) {
+  #sidebar .btns-down button:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #838383;
+  }
+  #sidebar .btns-down button {
+    width: 100%;
+  }
+}

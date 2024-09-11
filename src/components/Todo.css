@@ -1,0 +1,88 @@
+#todo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-block {
+  background-color: #383838;
+  max-width: 800px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.todo-block-list {
+  background-color: #383838;
+  max-width: 800px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  overflow-y: scroll;
+}
+
+.todo-block h2 {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.todo-no-todo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todo-no-todo img {
+  max-width: 150px;
+  height: auto;
+  user-select: none;
+  margin-bottom: 50px;
+}
+
+.todo-no-todo button {
+  padding: 8px 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 0;
+  letter-spacing: 0.3px;
+}
+
+.todo-no-todo button:hover {
+  background-color: #666666;
+}
+
+.notodo-text {
+  padding-inline: 13px;
+}
+@media (max-width: 1150px) {
+  #todo {
+    padding-inline: 10px;
+  }
+}
+@media (max-width: 1050px) {
+  .todo-block-list,
+  .todo-block {
+    max-width: 500px;
+  }
+}
+@media (max-width: 960px) {
+  .todo-block {
+    max-height: 561px;
+  }
+  #todo {
+    align-items: unset;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+  }
+}

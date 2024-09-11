@@ -1,0 +1,140 @@
+#sidebar {
+  max-width: 300px;
+  width: 100%;
+  background-color: #3f3f3f;
+  position: relative;
+}
+
+#sidebar.closed {
+  max-width: 50px;
+  background-color: transparent;
+}
+
+#sidebar .tasks-and-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px;
+}
+
+#sidebar .sidebar-arrow {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-arrow.closed {
+  transform: rotate(180deg);
+}
+
+#sidebar .sidebar-arrow.opened {
+  transform: rotate(180deg);
+}
+
+#sidebar h2 {
+  white-space: nowrap;
+  user-select: none;
+}
+
+#sidebar h2.hidden {
+  display: none;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar .sidebar-todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 13px;
+  background-color: #494949;
+  border-bottom: 1px solid #fff;
+  word-break: break-all;
+  gap: 10px;
+}
+#sidebar .sidebar-todo:first-child {
+  border-top: 1px solid #fff;
+}
+#sidebar .sidebar-todo:hover {
+  background-color: #505050;
+}
+
+#sidebar .notodo-text {
+  white-space: nowrap;
+}
+
+#sidebar .sidebar-todo svg {
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+#sidebar .sidebar-edit-delete {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  word-break: initial;
+}
+
+#sidebar .sidebar-edit-delete p:first-child {
+  cursor: pointer;
+}
+
+#sidebar .sidebar-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+#sidebar .delete-all-btn {
+  display: block;
+  max-width: 91px;
+  margin-left: auto;
+  padding-inline: 13px;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-bottom: 70px;
+}
+
+#sidebar .closing-wrapper.closed {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+  #sidebar {
+    max-width: 250px;
+  }
+
+  #sidebar .sidebar-todo {
+    gap: 5px;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 960px) {
+  #sidebar {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  #sidebar.closed {
+    width: 50px;
+    min-width: 50px;
+  }
+  #sidebar .delete-all-btn {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 760px) {
+  #sidebar {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+}
