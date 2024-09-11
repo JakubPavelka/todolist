@@ -7,7 +7,7 @@ import {
   setTaskToEdit,
   removeTodo,
   completedTodo,
-  sidebarReducer,
+  sidebarClose,
 } from "../store/features/todoSlice";
 import { useCallback } from "react";
 
@@ -37,7 +37,7 @@ const SubmittedTodo = () => {
       dispatch(creatingTodoReducerT());
 
       if (window.innerWidth <= 760) {
-        dispatch(sidebarReducer());
+        dispatch(sidebarClose());
       }
     },
     [dispatch]

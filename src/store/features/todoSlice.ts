@@ -276,6 +276,9 @@ export const TodoSlice = createSlice({
     sidebarReducer: (state) => {
       state.sidebarOpen = !state.sidebarOpen;
     },
+    sidebarClose: (state) => {
+      state.sidebarOpen = false;
+    },
   },
 });
 
@@ -296,4 +299,5 @@ export const {
   creatingTodoReducer,
   creatingTodoReducerT,
   sidebarReducer,
+  sidebarClose,
 } = TodoSlice.actions;

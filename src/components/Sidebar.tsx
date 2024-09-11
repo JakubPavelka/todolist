@@ -19,6 +19,7 @@ import {
   Todo,
   creatingTodoReducerT,
   sidebarReducer,
+  sidebarClose,
 } from "../store/features/todoSlice";
 import SidebarDownBtns from "./SidebarDownBtns";
 import { format } from "date-fns";
@@ -119,7 +120,7 @@ const Sidebar: React.FC = () => {
       dispatch(creatingTodoReducerT());
 
       if (window.innerWidth <= 760) {
-        dispatch(sidebarReducer());
+        dispatch(sidebarClose());
       }
     },
     [dispatch]
