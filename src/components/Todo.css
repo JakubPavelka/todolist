@@ -9,9 +9,7 @@
 .todo-block {
   background-color: #383838;
   max-width: 800px;
-  max-height: 500px;
   width: 100%;
-  height: 100%;
   padding: 20px;
   border-radius: 4px;
 }
@@ -77,11 +75,8 @@
   }
 }
 @media (max-width: 960px) {
-  .todo-block {
-    max-height: 561px;
-  }
   #todo {
-    align-items: unset;
+    align-items: start;
     height: calc(100vh - 50px);
     margin-top: 50px;
   }
